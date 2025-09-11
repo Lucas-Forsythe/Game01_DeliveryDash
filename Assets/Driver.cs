@@ -3,20 +3,20 @@ using UnityEngine.InputSystem;
 
 public class Driver : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 0.1f;
-    [SerializeField] float steerSpeed = 0.5f;
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float steerSpeed = 75f;
 
     void Update()
     {
         float move = 0f;
         float steer = 0f;
 
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.sKey.isPressed)
         {
             move = 1f;
         }
         
-        else if (Keyboard.current.sKey.isPressed)
+        else if (Keyboard.current.wKey.isPressed)
         {
             move = -1f;
         }
